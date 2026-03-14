@@ -1,12 +1,7 @@
 {
   "targets": {
-    "hello.o": {
-      "deps": [],
-      "command": "gcc -c -o hello.o hello.c"
-    },
-    "hello": {
-      "deps": ["hello.o"],
-      "command": "gcc -o hello hello.o"
-    }
+    "a": {"deps": ["b"], "command": "echo a"},
+    "b": {"deps": ["c"], "command": "echo b"},
+    "c": {"deps": ["a"], "command": "echo c"}
   }
 }
